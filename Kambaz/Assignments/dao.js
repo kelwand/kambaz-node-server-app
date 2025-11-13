@@ -7,6 +7,11 @@ export default function AssignmentsDao(db) {
     return assignments.filter((a) => a.module === moduleId);
   }
 
+  function findAssignmentsForCourse(courseId) {
+    return assignments.filter((a) => a.course === courseId);
+  }
+
+
   function createAssignment(assignment) {
     const newAssignment = { ...assignment, _id: uuidv4() };
     assignments.push(newAssignment);
@@ -33,6 +38,7 @@ export default function AssignmentsDao(db) {
 
   return {
     findAssignmentsForModule,
+    findAssignmentsForCourse,
     createAssignment,
     updateAssignment,
     deleteAssignment,
