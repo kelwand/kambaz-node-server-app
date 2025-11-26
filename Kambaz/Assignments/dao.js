@@ -1,46 +1,38 @@
 import { v4 as uuidv4 } from "uuid";
+import model from "./model.js";
 
-export default function AssignmentsDao(db) {
-  const { assignments } = db;
-
-  function findAssignmentsForModule(moduleId) {
-    return assignments.filter((a) => a.module === moduleId);
-  }
-
-  function findAssignmentsForCourse(courseId) {
-    return assignments.filter((a) => a.course === courseId);
-  }
-
-
-  function createAssignment(assignment) {
-    const newAssignment = { ...assignment, _id: uuidv4() };
-    assignments.push(newAssignment);
-    return newAssignment;
-  }
-
-  function updateAssignment(assignmentId, updates) {
-    const index = assignments.findIndex((a) => a._id === assignmentId);
-    if (index !== -1) {
-      assignments[index] = { ...assignments[index], ...updates };
-      return assignments[index];
-    }
-    return null;
-  }
-
-  function deleteAssignment(assignmentId) {
-    const index = assignments.findIndex((a) => a._id === assignmentId);
-    if (index !== -1) {
-      assignments.splice(index, 1);
-      return { status: "deleted" };
-    }
-    return { status: "not found" };
-  }
-
-  return {
-    findAssignmentsForModule,
-    findAssignmentsForCourse,
-    createAssignment,
-    updateAssignment,
-    deleteAssignment,
-  };
+export function findAssignmentsForCourse(courseId) {
+  return model.find({ course: courseId });
 }
+
+export function findAssignmentsForModule(moduleId) {
+  return model.find({ module: moduleId });
+}
+
+export function createAssignment(assignment) {
+  const newAssignment = { ...assignment, _id: uuidv4() };
+  return model.create(newAssignment);
+}
+
+export function updateAssignment(assignmentId, updates) {
+  return model.updateOne({ _id: assignmentId }, { $set: updates });
+}
+
+export function deleteAssignment(assignmentId) {
+  return model.deleteOne({ _id: assignmentId });
+}
+
+export function findAssignmentById(assignmentId) {
+  return model.findById(assignmentId);
+}
+
+
+export default {
+  findAssignmentsForModule,
+  findAssignmentsForCourse,
+  createAssignment,
+  updateAssignment,
+  deleteAssignment,
+  findAssignmentById
+};
+

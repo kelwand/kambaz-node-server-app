@@ -1,0 +1,303 @@
+[
+  {
+    "_id": "CS1234",
+    "number": "CS1234",
+    "name": "React JS",
+    "term": "Summer 2024",
+    "startDate": "2024-07-01",
+    "endDate": "2024-08-30",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Full Stack software development with React.js — covering components, hooks, routing, and API integration.",
+    "modules": []
+  },
+  {
+    "_id": "CS1800",
+    "number": "CS1800",
+    "name": "Discrete Structures",
+    "term": "Summer 2024",
+    "startDate": "2024-07-01",
+    "endDate": "2024-08-30",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Mathematical foundations of computer science — logic, proofs, sets, functions, and combinatorics.",
+    "modules": []
+  },
+  {
+    "_id": "CS2500",
+    "number": "CS2500",
+    "name": "Fundamentals of Computer Science 1",
+    "term": "Summer 2024",
+    "startDate": "2024-07-01",
+    "endDate": "2024-08-30",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Introduction to programming using functional design principles and Racket.",
+    "modules": []
+  },
+  {
+    "_id": "CS2510",
+    "number": "CS2510",
+    "name": "Fundamentals of Computer Science 2",
+    "term": "Summer 2024",
+    "startDate": "2024-07-01",
+    "endDate": "2024-08-30",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Object-oriented programming in Java with data structures and design patterns.",
+    "modules": []
+  },
+  {
+    "_id": "CS3500",
+    "number": "CS3500",
+    "name": "Object Oriented Design",
+    "term": "Summer 2024",
+    "startDate": "2024-07-01",
+    "endDate": "2024-08-30",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Principles of object-oriented software design, architecture, and abstraction.",
+    "modules": []
+  },
+  {
+    "_id": "CY2550",
+    "number": "CY2550",
+    "name": "Foundations of Cybersecurity",
+    "term": "Summer 2024",
+    "startDate": "2024-07-01",
+    "endDate": "2024-08-30",
+    "department": "Cybersecurity",
+    "credits": 3,
+    "description": "Introduction to cybersecurity fundamentals, encryption, and network defense strategies.",
+    "modules": []
+  },
+  {
+    "_id": "DS3000",
+    "number": "DS3000",
+    "name": "Foundations of Data Science",
+    "term": "Summer 2024",
+    "startDate": "2024-07-01",
+    "endDate": "2024-08-30",
+    "department": "Data Science",
+    "credits": 4,
+    "description": "Introduction to data analysis, visualization, and Python programming for data science.",
+    "modules": []
+  },
+
+  {
+    "_id": "RS101",
+    "name": "Rocket Propulsion",
+    "number": "RS4550",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D123",
+    "credits": 4,
+    "description": "An in-depth study of rocket propulsion theory, engine types, fuel chemistry, and applications.",
+    "modules": [
+      {
+        "_id": "M101",
+        "name": "Introduction to Rocket Propulsion",
+        "description": "Basic principles of rocket propulsion and rocket engines.",
+        "course": "RS101",
+        "lessons": [
+          {
+            "_id": "L101",
+            "name": "History of Rocketry",
+            "description": "A brief history of rocketry and space exploration.",
+            "module": "M101"
+          },
+          {
+            "_id": "L102",
+            "name": "Rocket Propulsion Fundamentals",
+            "description": "Basic principles of rocket propulsion.",
+            "module": "M101"
+          },
+          {
+            "_id": "L103",
+            "name": "Rocket Engine Types",
+            "description": "Overview of different types of rocket engines.",
+            "module": "M101"
+          }
+        ]
+      },
+      {
+        "_id": "M102",
+        "name": "Fuel and Combustion",
+        "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+        "course": "RS101",
+        "lessons": [
+          {
+            "_id": "L201",
+            "name": "Rocket Fuel",
+            "description": "Overview of different types of rocket fuels.",
+            "module": "M102"
+          },
+          {
+            "_id": "L202",
+            "name": "Combustion Processes",
+            "description": "Understanding combustion processes and efficiency.",
+            "module": "M102"
+          },
+          {
+            "_id": "L203",
+            "name": "Combustion Instability",
+            "description": "Understanding combustion instability and mitigation.",
+            "module": "M102"
+          }
+        ]
+      },
+      {
+        "_id": "M103",
+        "name": "Nozzle Design",
+        "description": "Principles of rocket nozzle design and performance optimization.",
+        "course": "RS101",
+        "lessons": [
+          {
+            "_id": "L301",
+            "name": "Nozzle Design",
+            "description": "Overview of different types of rocket nozzles.",
+            "module": "M103"
+          },
+          {
+            "_id": "L302",
+            "name": "Nozzle Performance",
+            "description": "Understanding nozzle performance and efficiency.",
+            "module": "M103"
+          },
+          {
+            "_id": "L303",
+            "name": "Nozzle Optimization",
+            "description": "Optimizing nozzle design for specific applications.",
+            "module": "M103"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "_id": "RS102",
+    "name": "Aerodynamics",
+    "number": "RS4560",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D123",
+    "credits": 3,
+    "description": "Exploration of aerodynamics, airflow principles, airfoil design, lift, and drag forces.",
+    "modules": [
+      {
+        "_id": "M201",
+        "name": "Fundamentals of Aerodynamics",
+        "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+        "course": "RS102",
+        "lessons": []
+      },
+      {
+        "_id": "M202",
+        "name": "Subsonic and Supersonic Flow",
+        "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+        "course": "RS102",
+        "lessons": []
+      },
+      {
+        "_id": "M203",
+        "name": "Aerodynamic Heating",
+        "description": "Study of aerodynamic heating and thermal protection systems.",
+        "course": "RS102",
+        "lessons": []
+      }
+    ]
+  },
+
+  {
+    "_id": "RS103",
+    "name": "Spacecraft Design",
+    "number": "RS4570",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D123",
+    "credits": 4,
+    "description": "Detailed study of spacecraft engineering including propulsion, power systems, and payload integration.",
+    "modules": [
+      {
+        "_id": "M301",
+        "name": "Spacecraft Structural Design",
+        "description": "Fundamentals of designing spacecraft structures and materials selection.",
+        "course": "RS103",
+        "lessons": []
+      },
+      {
+        "_id": "M302",
+        "name": "Orbital Mechanics",
+        "description": "Understanding orbital dynamics and mission planning.",
+        "course": "RS103",
+        "lessons": []
+      },
+      {
+        "_id": "M303",
+        "name": "Spacecraft Systems Engineering",
+        "description": "Overview of spacecraft systems and subsystems engineering.",
+        "course": "RS103",
+        "lessons": []
+      }
+    ]
+  },
+
+  {
+    "_id": "RS104",
+    "name": "Organic Chemistry",
+    "number": "CH1230",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Study of the structure, composition, and reactions of organic compounds and materials.",
+    "modules": []
+  },
+  {
+    "_id": "RS105",
+    "name": "Inorganic Chemistry",
+    "number": "CH1240",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Focus on properties, structures, and behaviors of inorganic and organometallic compounds.",
+    "modules": []
+  },
+  {
+    "_id": "RS106",
+    "name": "Physical Chemistry",
+    "number": "CH1250",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Exploration of thermodynamics, kinetics, quantum mechanics, and spectroscopy in chemistry.",
+    "modules": []
+  },
+  {
+    "_id": "RS107",
+    "name": "Ancient Languages and Scripts of Middle-earth",
+    "number": "ME101",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Languages",
+    "credits": 3,
+    "description": "Exploration of Elvish, Dwarvish, and the Black Speech of Mordor, their structure and cultural context.",
+    "author": "654f9ec2ea7ead465908d1e3",
+    "modules": []
+  },
+  {
+    "_id": "RS108",
+    "name": "Wizards, Elves, and Men: Inter-species Diplomacy in Middle-earth",
+    "number": "ME102",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Political Studies",
+    "credits": 4,
+    "description": "Study of diplomacy and leadership among races of Middle-earth, including alliances and conflicts.",
+    "author": "654f9ec2ea7ead465908d1e3",
+    "modules": []
+  }
+]

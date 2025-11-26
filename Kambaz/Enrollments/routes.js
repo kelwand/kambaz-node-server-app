@@ -1,38 +1,32 @@
-import EnrollmentsDao from "./dao.js";
+import {
+  enrollUserInCourse,
+  unenrollUserFromCourse,
+  findCoursesForUser,
+  findUsersForCourse,
+} from "./dao.js";
 
-export default function EnrollmentsRoutes(app, db) {
-    const dao = EnrollmentsDao(db);
+export default function EnrollmentsRoutes(app) {
+  app.post("/api/users/:userId/courses/:courseId/enroll", async (req, res) => {
+    const { userId, courseId } = req.params;
+    await enrollUserInCourse(userId, courseId);
+    res.sendStatus(200);
+  });
 
-    const enrollUserInCourse = (req, res) => {
-        const { userId, courseId } = req.params;
-        dao.enrollUserInCourse(userId, courseId);
-        res.sendStatus(200);
-    };
-    app.post("/api/users/:userId/courses/:courseId/enrollments", enrollUserInCourse);
+  app.delete("/api/users/:userId/courses/:courseId/enroll", async (req, res) => {
+    const { userId, courseId } = req.params;
+    await unenrollUserFromCourse(userId, courseId);
+    res.sendStatus(200);
+  });
 
-    const unenrollUserFromCourse = (req, res) => {
-        const { userId, courseId } = req.params;
-        dao.unenrollUserFromCourse(userId, courseId);
-        res.sendStatus(200);
-    };
-    app.delete("/api/users/:userId/courses/:courseId/enrollments", unenrollUserFromCourse);
+  app.get("/api/users/:userId/enrollments", async (req, res) => {
+    const { userId } = req.params;
+    const courses = await findCoursesForUser(userId);
+    res.json(courses); 
+  });
 
-    const findAllEnrollments = (req, res) => {
-        const enrollments = dao.findAllEnrollments();
-        res.json(enrollments);
-    };
-    app.get("/api/enrollments", findAllEnrollments);
-
-    const findCoursesForUser = (req, res) => {
-        const { userId } = req.params;
-        const courses = dao.findCoursesForUser(userId);
-        res.json(courses);
-    };
-    app.get("/api/users/:userId/enrollments", findCoursesForUser);
-
-    const findAllUsers = (req, res) => {
-        const users = dao.findAllUsers();
-        res.json(users);
-    };
-    app.get("/api/users", findAllUsers);
+  app.get("/api/courses/:courseId/enrollments", async (req, res) => {
+    const { courseId } = req.params;
+    const users = await findUsersForCourse(courseId);
+    res.json(users);
+  });
 }

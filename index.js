@@ -2,7 +2,6 @@ import express from 'express';
 import Hello from "./Hello.js"
 import Lab5 from "./Lab5/index.js";
 import cors from "cors";
-import db from "./Kambaz/Database/index.js";
 import UserRoutes from "./Kambaz/Users/routes.js";
 import "dotenv/config";
 import session from "express-session";
@@ -45,10 +44,10 @@ mongoose.connect(CONNECTION_STRING);
 app.use(session(sessionOptions));
 app.use(express.json());
 UserRoutes(app);
-CourseRoutes(app, db);
-AssignmentRoutes(app, db);
-ModulesRoutes(app, db);
-EnrollmentsRoutes(app, db);
+CourseRoutes(app);
+AssignmentRoutes(app);
+ModulesRoutes(app);
+EnrollmentsRoutes(app);
 Hello(app)
 Lab5(app);
 app.listen(process.env.PORT || 4000)
